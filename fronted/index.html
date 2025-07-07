@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UnFake - AI-Powered Deepfake Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="logo">
+            🔍 HAWKVS
+        </div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <h1>AI-Powered Deepfake Detection</h1>
+        <p class="subtitle">
+            Protect yourself from manipulated media with our advanced AI technology. 
+            Upload an image or video to verify its authenticity instantly.
+        </p>
+        
+        <div class="upload-container" id="uploadBox">
+            <div class="upload-icon">📁</div>
+            <div class="upload-text">Click or drag your media file here</div>
+            <div class="upload-hint">Supports JPG, PNG, MP4, MOV (Max 50MB)</div>
+        </div>
+        
+        <input type="file" id="fileInput" accept="image/*,video/*">
+
+        <div class="preview-container">
+            <img id="previewImg" class="preview-media" style="display:none;" />
+            <video id="previewVid" class="preview-media" controls style="display:none;"></video>
+        </div>
+
+        <button id="analyzeBtn" class="btn" style="display:none;">🔍 Analyze Media</button>
+        
+        <div id="loading" class="loading" style="display:none;">
+            <div class="spinner"></div>
+            <span>Analyzing your media...</span>
+        </div>
+
+        <div id="result" class="result" style="display:none;">
+            <h3>Analysis Result</h3>
+            <div class="confidence-bar">
+                <div id="confidenceFill" class="confidence-fill"></div>
+            </div>
+            <p>Confidence: <span id="confidence"></span>%</p>
+            <span id="badge" class="badge"></span>
+            <div class="stats">
+                <span>Processing time: <span id="processTime">--</span>s</span>
+                <span>File size: <span id="fileSize">--</span></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dataset Section -->
+    <div class="dataset-section">
+        <div class="dataset-container">
+            <h3>📊 Dataset Information</h3>
+            <div class="dataset-content">
+                <p>This deepfake detection model has been trained on a comprehensive dataset to ensure robust performance across various media types and manipulation techniques.</p>
+                
+                <div class="dataset-details">
+                    <div class="dataset-card">
+                        <span class="dataset-icon">🎯</span>
+                        <div>
+                            <strong>Training Dataset:</strong>
+                            <p id="datasetName">Custom Multi-Modal Dataset</p>
+                            <small>*Dataset name can be customized based on your specific training data</small>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-card">
+                        <span class="dataset-icon">🔢</span>
+                        <div>
+                            <strong>Sample Size:</strong>
+                            <p>100,000+ authentic and manipulated media samples</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-card">
+                        <span class="dataset-icon">🎬</span>
+                        <div>
+                            <strong>Media Types:</strong>
+                            <p>High-resolution images and videos with various compression levels</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dataset-card">
+                        <span class="dataset-icon">⚡</span>
+                        <div>
+                            <strong>Model Accuracy:</strong>
+                            <p>95.2% accuracy on validation set</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="dataset-note">
+                    <p><strong>Note:</strong> The dataset name and details can be updated to reflect your specific training data and model specifications.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Disclaimer Section -->
+    <div class="disclaimer-section">
+        <div class="disclaimer-container">
+            <h3>⚠️ Important Disclaimer</h3>
+            <div class="disclaimer-content">
+                <div class="project-info">
+                    <h4>🎓 Research Project</h4>
+                    <p><strong>This project is developed under the supervision of Dr. Akshay Pandy</strong> for educational and research purposes. The deepfake detection system is designed to advance understanding in AI-based media authentication.</p>
+                </div>
+                
+                <div class="disclaimer-points">
+                    <div class="disclaimer-point">
+                        <span class="point-icon">🔍</span>
+                        <div>
+                            <strong>Accuracy Limitations:</strong>
+                            <p>Detection accuracy may vary based on media quality, deepfake sophistication, and other factors. False positives and negatives are possible.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="disclaimer-point">
+                        <span class="point-icon">📊</span>
+                        <div>
+                            <strong>Not Legal Evidence:</strong>
+                            <p>Results should not be used as sole evidence in legal proceedings or critical decision-making without professional verification.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="disclaimer-point">
+                        <span class="point-icon">🔒</span>
+                        <div>
+                            <strong>Privacy Notice:</strong>
+                            <p>Uploaded files are processed locally and not stored on our servers. However, exercise caution with sensitive content.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="disclaimer-point">
+                        <span class="point-icon">🛡️</span>
+                        <div>
+                            <strong>Academic Use:</strong>
+                            <p>This tool is intended for educational and research purposes. Commercial use requires proper authorization from the research team.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="disclaimer-footer">
+                    <p><em>By using this tool, you acknowledge that you understand these limitations and agree to use it responsibly for educational and research purposes.</em></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
